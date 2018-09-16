@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Hometask2</string>
+    <string name="buttonText">Preview</string>
+    <string name="textHint">Type your message here!</string>
+    <string name="emailButton">EMAIL</string>
+</resources>
