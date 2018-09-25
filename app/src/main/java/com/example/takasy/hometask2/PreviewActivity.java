@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PreviewActivity extends AppCompatActivity {
 
@@ -20,8 +21,8 @@ public class PreviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview);
 
-        TextView textView = findViewById(R.id.textView);
-        Button button = findViewById(R.id.emailButton);
+        final TextView textView = findViewById(R.id.textView);
+        final Button button = findViewById(R.id.emailButton);
         final String[] address = {"test@gmail.com"};
         final String subject = "Hello Android!";
 
@@ -38,6 +39,8 @@ public class PreviewActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_TEXT, receivedMessage);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
+                } else {
+                    Toast.makeText(PreviewActivity.this, R.string.no_email, Toast.LENGTH_LONG).show();
                 }
             }
         });

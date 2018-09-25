@@ -3,4 +3,5 @@
     <string name="buttonText">Preview</string>
     <string name="textHint">Type your message here!</string>
     <string name="emailButton">EMAIL</string>
+    <string name="no_email">Sorry You don\'t have any email app</string>
 </resources>

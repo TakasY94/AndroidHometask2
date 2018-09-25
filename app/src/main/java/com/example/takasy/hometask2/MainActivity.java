@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button button = findViewById(R.id.button);
+        final Button button = findViewById(R.id.button);
         final EditText editText = findViewById(R.id.text);
 
         button.setOnClickListener(new View.OnClickListener() {
